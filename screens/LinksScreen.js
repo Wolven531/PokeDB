@@ -13,37 +13,37 @@ export default class LinksScreen extends React.Component {
 		return (
 			<ScrollView style={styles.container}>
 				<Touchable
-					style={styles.option}
+					style={styles.clickableLink}
 					background={Touchable.Ripple('#ccc', false)}
 					onPress={this._handleVisitPokeDB}>
 					<View style={{ flexDirection: 'row' }}>
-						<View style={styles.optionIconContainer}>
+						<View style={styles.clickableLinkIconContainer}>
 							<Ionicons
 								name="ios-chatboxes"
 								size={22}
 								color="#ccc"
 							/>
 						</View>
-						<View style={styles.optionText}>
-							<Text style={{}}>Visit the Pokemon DB site</Text>
+						<View>
+							<Text style={styles.clickableLinkText}>Visit the Pokemon DB site</Text>
 						</View>
 					</View>
 				</Touchable>
 
 				<Touchable
-					style={styles.option}
+					style={styles.clickableLink}
 					background={Touchable.Ripple('#ccc', false)}
 					onPress={this._handleVisitGithub}>
 					<View style={{ flexDirection: 'row' }}>
-						<View style={styles.optionIconContainer}>
+						<View style={styles.clickableLinkIconContainer}>
 							<Ionicons
 								name="ios-chatboxes"
 								size={22}
 								color="#ccc"
 							/>
 						</View>
-						<View style={styles.optionText}>
-							<Text style={{}}>
+						<View>
+							<Text style={styles.clickableLinkText}>
 								Visit the Github page for this app
 							</Text>
 						</View>
@@ -68,17 +68,18 @@ const styles = StyleSheet.create({
 		paddingTop: 15,
 		backgroundColor: '#fff'
 	},
-	optionIconContainer: {
-		marginRight: 9
-	},
-	option: {
+	clickableLink: {
 		backgroundColor: '#fdfdfd',
 		paddingHorizontal: 15,
 		paddingVertical: 15,
 		borderBottomWidth: StyleSheet.hairlineWidth,
 		borderBottomColor: '#EDEDED'
 	},
-	optionText: {
+	clickableLinkIconContainer: {
+		marginRight: 9
+	},
+	clickableLinkText: {
+		color: '#00f',
 		fontSize: 15,
 		marginTop: 1
 	}

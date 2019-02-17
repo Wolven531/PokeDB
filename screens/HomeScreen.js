@@ -5,10 +5,10 @@ import {
 	ScrollView,
 	StyleSheet,
 	Text,
-	TouchableOpacity,
+	// TouchableOpacity,
 	View
 } from 'react-native'
-import { WebBrowser } from 'expo'
+// import { WebBrowser } from 'expo'
 
 // import { MonoText } from '../components/StyledText'
 
@@ -30,33 +30,17 @@ export default class HomeScreen extends React.Component {
 							source={require('../assets/images/robot-dev.png')}
 							style={styles.genericImage}/>
 						*/}
-						<TouchableOpacity
-							onPress={this._handleLinkPress}
-							style={styles.clickableLink}>
-							<Text style={styles.clickableLinkText}>
-								PokeDB Home
-							</Text>
-						</TouchableOpacity>
+						<Text>
+							PokeDB Home
+						</Text>
 					</View>
 				</ScrollView>
 			</View>
 		)
 	}
-
-	_handleLinkPress = () => {
-		WebBrowser.openBrowserAsync('https://github.com/Wolven531/PokeDB')
-	}
 }
 
 const styles = StyleSheet.create({
-	clickableLink: {
-		backgroundColor: 'rgba(0, 0, 0, .1)',
-		marginVertical: 15,
-		padding: 15
-	},
-	clickableLinkText: {
-		color: '#00f'
-	},
 	container: {
 		flex: 1,
 		backgroundColor: '#fff'
