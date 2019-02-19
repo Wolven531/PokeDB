@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-	// Image,
+	Image,
 	Platform,
 	ScrollView,
 	StyleSheet,
@@ -25,11 +25,6 @@ export default class HomeScreen extends React.Component {
 					style={styles.container}
 					contentContainerStyle={styles.contentContainer}>
 					<View>
-						{/*
-						<Image
-							source={require('../assets/images/robot-dev.png')}
-							style={styles.genericImage}/>
-						*/}
 						<Text>
 							PokeDB Home
 						</Text>
@@ -47,11 +42,10 @@ const styles = StyleSheet.create({
 	},
 	contentContainer: { },
 	genericImage: {
-		width: 100,
-		height: 80,
+		width: '100%',
+		// height: 80,
 		resizeMode: 'contain',
-		marginTop: 3,
-		marginLeft: -10
+		// marginTop: 3
 	},
 	tabBarInfoContainer: {
 		position: 'absolute',
