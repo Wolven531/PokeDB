@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-	Image,
 	Platform,
 	ScrollView,
 	StyleSheet,
@@ -41,12 +40,6 @@ const styles = StyleSheet.create({
 		backgroundColor: '#fff'
 	},
 	contentContainer: { },
-	genericImage: {
-		width: '100%',
-		// height: 80,
-		resizeMode: 'contain',
-		// marginTop: 3
-	},
 	tabBarInfoContainer: {
 		position: 'absolute',
 		bottom: 0,
