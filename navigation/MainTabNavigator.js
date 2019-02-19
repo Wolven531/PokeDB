@@ -10,10 +10,12 @@ import TabBarIcon from '../components/TabBarIcon'
 import HomeScreen from '../screens/HomeScreen'
 import LinksScreen from '../screens/LinksScreen'
 import SettingsScreen from '../screens/SettingsScreen'
+import TypechartScreen from '../screens/TypechartScreen'
 
 const HomeStack = createStackNavigator({ Home: HomeScreen })
 const LinksStack = createStackNavigator({ Links: LinksScreen })
 const SettingsStack = createStackNavigator({ Settings: SettingsScreen })
+const TypechartStack = createStackNavigator({ Typechart: TypechartScreen })
 
 HomeStack.navigationOptions = {
 	tabBarLabel: 'Home',
@@ -49,8 +51,19 @@ SettingsStack.navigationOptions = {
 	)
 }
 
+TypechartStack.navigationOptions = {
+	tabBarLabel: 'Typechart',
+	tabBarIcon: ({ focused }) => (
+		<TabBarIcon
+			focused={focused}
+			name={Platform.OS === 'ios' ? 'ios-analytics' : 'md-analytics'}
+		/>
+	)
+}
+
 export default createBottomTabNavigator({
 	HomeStack,
+	TypechartStack,
 	LinksStack,
 	SettingsStack
 })
