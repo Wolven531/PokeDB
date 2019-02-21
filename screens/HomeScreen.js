@@ -9,6 +9,8 @@ import {
 } from 'react-native'
 // import { WebBrowser } from 'expo'
 
+import * as IconJson from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/Ionicons.json'
+
 // import { MonoText } from '../components/StyledText'
 
 export default class HomeScreen extends React.Component {
@@ -27,6 +29,7 @@ export default class HomeScreen extends React.Component {
 						<Text>
 							PokeDB Home
 						</Text>
+						{Object.keys(IconJson).map(iconKey => <Text key={iconKey}>{iconKey}</Text>)}
 					</View>
 				</ScrollView>
 			</View>
