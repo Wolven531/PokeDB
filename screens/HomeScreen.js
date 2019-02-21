@@ -9,7 +9,8 @@ import {
 } from 'react-native'
 // import { WebBrowser } from 'expo'
 
-import * as IconJson from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/Ionicons.json'
+import { Ionicons } from '@expo/vector-icons'
+import * as IconMap from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/Ionicons.json'
 
 // import { MonoText } from '../components/StyledText'
 
@@ -29,7 +30,18 @@ export default class HomeScreen extends React.Component {
 						<Text>
 							PokeDB Home
 						</Text>
-						{Object.keys(IconJson).map(iconKey => <Text key={iconKey}>{iconKey}</Text>)}
+						{/*
+						{Object.keys(IconMap).map(iconKey => <Text key={iconKey}>{iconKey}</Text>)}
+						*/}
+						<View style={styles.iconContainer}>
+							{Object.keys(IconMap).map(iconKey => iconKey !== 'default' && <Ionicons
+								key={iconKey}
+								name={iconKey}
+								style={styles.icon}
+								size={25}
+								color="#00f"
+							/>)}
+						</View>
 					</View>
 				</ScrollView>
 			</View>
@@ -43,6 +55,17 @@ const styles = StyleSheet.create({
 		backgroundColor: '#fff'
 	},
 	contentContainer: { },
+	iconContainer: {
+		flex: 1,
+		flexDirection: 'row',
+		flexWrap: 'wrap',
+		// justifyContent: 'space-evenly',
+		justifyContent: 'space-around',
+		padding: 20
+	},
+	icon: {
+		margin: 10
+	},
 	tabBarInfoContainer: {
 		position: 'absolute',
 		bottom: 0,
