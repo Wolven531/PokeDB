@@ -1,16 +1,9 @@
 import React from 'react'
 import {
 	Image,
-	// Platform,
 	ScrollView,
 	StyleSheet
-	// Text,
-	// TouchableOpacity,
-	// View
 } from 'react-native'
-// import { WebBrowser } from 'expo'
-
-// import { MonoText } from '../components/StyledText'
 
 export default class TypechartScreen extends React.Component {
 	static navigationOptions = {
@@ -33,11 +26,7 @@ export default class TypechartScreen extends React.Component {
 
 const styles = StyleSheet.create({
 	container: {
-		// backgroundColor: '#0f0',
-		// flex: 1,
-		// flexDirection: 'column',
-		// flexWrap: 'nowrap',
-		// flex-flow: 'column nowrap'
+		// backgroundColor: '#0f0'
 	},
 	contentContainer: {
 		// alignContent: 'flex-start',
@@ -55,8 +44,6 @@ const styles = StyleSheet.create({
 		// padding: 0
 	},
 	genericImage: {
-		// height: 80,
-		// marginTop: 3,
 		resizeMode: 'contain',
 		width: '100%'
 	}
