@@ -2,11 +2,11 @@ import React from 'react'
 import {
 	Image,
 	// Platform,
-	// ScrollView,
-	StyleSheet,
+	ScrollView,
+	StyleSheet
 	// Text,
 	// TouchableOpacity,
-	View
+	// View
 } from 'react-native'
 // import { WebBrowser } from 'expo'
 
@@ -19,30 +19,41 @@ export default class TypechartScreen extends React.Component {
 
 	render() {
 		return (
-			<View style={styles.container}>
-				{/*
-				<ScrollView
-					style={styles.container}
-					contentContainerStyle={styles.contentContainer}>
-				*/}
-					<Image
-						source={require('../assets/images/typechart.png')}
-						style={styles.genericImage}/>
-				{/*
-				</ScrollView>
-				*/}
-			</View>
+			<ScrollView
+				style={styles.container}
+				contentContainerStyle={styles.contentContainer}>
+				<Image
+					source={require('../assets/images/typechart.png')}
+					style={styles.genericImage}
+				/>
+			</ScrollView>
 		)
 	}
 }
 
 const styles = StyleSheet.create({
 	container: {
-		alignItems: 'flex-start',
-		backgroundColor: '#fff',
-		flex: 1
+		// backgroundColor: '#0f0',
+		// flex: 1,
+		// flexDirection: 'column',
+		// flexWrap: 'nowrap',
+		// flex-flow: 'column nowrap'
 	},
-	contentContainer: { },
+	contentContainer: {
+		// alignContent: 'flex-start',
+		// alignItems: 'flex-start',
+		flex: 1,
+		// flexDirection: 'column',
+		flexDirection: 'column-reverse',
+		// flexWrap: 'nowrap',
+		// flexFlow: 'column nowrap',
+		// justifyContent: 'center',
+		// justifyContent: 'flex-end',
+		// justifyContent: 'space-around',
+		justifyContent: 'flex-start',
+		// margin: 0,
+		// padding: 0
+	},
 	genericImage: {
 		// height: 80,
 		// marginTop: 3,
