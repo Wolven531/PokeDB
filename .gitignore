@@ -5,3 +5,5 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
+__tests__/__snapshots__/*.js.snap
+components/__tests__/__snapshots__/*.js.snap
